@@ -1,0 +1,34 @@
+/*
+* json编辑器自定义主题
+*/
+// 主体背景色          花括号 和冒号的颜色
+.cm-s-jsonEditorThem.CodeMirror { background: #F5F5F5; color: #c55fb8; }
+.cm-s-jsonEditorThem div.CodeMirror-selected { background: #b9b6b0; }
+.cm-s-jsonEditorThem .CodeMirror-line::selection, .cm-s-jsonEditorThem .CodeMirror-line > span::selection, .cm-s-jsonEditorThem .CodeMirror-line > span > span::selection { background: #b9b6b0; }
+.cm-s-jsonEditorThem .CodeMirror-line::-moz-selection, .cm-s-jsonEditorThem .CodeMirror-line > span::-moz-selection, .cm-s-jsonEditorThem .CodeMirror-line > span > span::-moz-selection { background: #b9b6b0; }
+// 左边栏背景色
+.cm-s-jsonEditorThem .CodeMirror-gutters { background: #d5d6d8; border-right: 0px; }
+.cm-s-jsonEditorThem .CodeMirror-guttermarker { color: black; }
+.cm-s-jsonEditorThem .CodeMirror-guttermarker-subtle { color: #8d8687; }
+.cm-s-jsonEditorThem .CodeMirror-linenumber { color: #8d8687; }
+.cm-s-jsonEditorThem .CodeMirror-cursor { border-left: 1px solid #776e71; }
+
+.cm-s-jsonEditorThem span.cm-comment { color: #e96ba8; }
+.cm-s-jsonEditorThem span.cm-atom { color: #815ba4; }
+.cm-s-jsonEditorThem span.cm-number { color: #815ba4; }
+
+.cm-s-jsonEditorThem span.cm-property, .cm-s-jsonEditorThem span.cm-attribute { color: #48b685; }
+.cm-s-jsonEditorThem span.cm-keyword { color: #ef6155; }
+// 字符串文字颜色
+.cm-s-jsonEditorThem span.cm-string { color: #9772b9; }
+
+.cm-s-jsonEditorThem span.cm-variable { color: #48b685; }
+.cm-s-jsonEditorThem span.cm-variable-2 { color: #06b6ef; }
+.cm-s-jsonEditorThem span.cm-def { color: #f99b15; }
+.cm-s-jsonEditorThem span.cm-bracket { color: #41323f; }
+.cm-s-jsonEditorThem span.cm-tag { color: #ef6155; }
+.cm-s-jsonEditorThem span.cm-link { color: #815ba4; }
+.cm-s-jsonEditorThem span.cm-error { background: #ef6155; color: #776e71; }
+
+.cm-s-jsonEditorThem .CodeMirror-activeline-background { background: #CFD1C4; }
+.cm-s-jsonEditorThem .CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
