@@ -43,7 +43,6 @@ inquirer
           console.log(chalk.red('新增失败', err));
         } else {
           console.log(chalk.green('\n新增成功'));
-          console.log('\ndtcreate list\n');
         }
         // 退出命令行
         process.exit()

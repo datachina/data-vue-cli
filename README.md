@@ -22,35 +22,70 @@ npm install dtcreate -g
 
 ## 使用
 
-在当前文件夹创建项目
+### 命令列表
 
-1. 命令行输入以下命令会将项目创建在当前文件夹
+| 命令名称 | 描述               |
+| -------- | ------------------ |
+| init     | 创建一个脚手架     |
+| list     | 查看当前脚手架列表 |
+| add      | 新增一个脚手架     |
+| delete   | 删除一个脚手架     |
 
-```
-dtcreate vue
-```
 
-2. 输入项目名称
 
-`? 请输入项目名称 demo`
+### 示例
 
-3. 选择UI框架
+`dtcreate list`
 
-`? 请选择UI框架 (Use arrow keys)`
-
-> `Element`
-> `Vant`
-> `Ant Design Vue`
-
-4. 进入项目文件夹下载依赖
+`dtcreate`会内置三个脚手架
 
 ```
-cd demo
-
-npm install
+E:\data-vue-cli> dtcreate list
+  vue-element
+  vue-vant
+  vue-ant-design-vue
 ```
 
-5. 修改package.json文件中的项目名（当前需手动修改，该步骤会在后续版本省略）
+`dtcreate add `
+
+```
+E:\data-vue-cli> dtcreate add 
+? 请输入模板名称 react
+? 请输入模板地址 https://gitlab.com:yanxiaos/myreact#main
+
+新增成功
+```
+
+`dtcreate delete`
+
+```
+E:\data-vue-cli> dtcreate delete
+? 请输入模板名称 react
+
+删除成功
+```
+
+`dtcreate init  `
+
+命令行输入以下命令会将项目创建在当前文件夹
+
+```
+E:\data-vue-cli> dtcreate init  
+? 请输入项目名称 demo
+? 请选择模板 (Use arrow keys)
+> vue-element
+  vue-vant
+  vue-ant-design-vue
+ 
+√ Downloading...
+
+ 下载成功!
+
+ To get started
+
+    cd demo
+    npm install
+```
 
 
 
@@ -60,5 +95,3 @@ npm install
 - 支持vue3脚手架的创建
 - 支持react脚手架的创建
 - 增加更多脚手架模板
-- 支持完全自定义的模板仓库
-

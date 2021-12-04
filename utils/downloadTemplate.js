@@ -25,7 +25,6 @@ module.exports = function downloadTemplate ({ appName, url }) {
         process.exit()
       }
       setAppName(appName, (err) => {
-        console.log('errererere', err);
         // 结束加载图标
         spinner.succeed();
         console.log(chalk.green('\n 下载成功!'))

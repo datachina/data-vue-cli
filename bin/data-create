@@ -11,6 +11,5 @@ program
   .command('add', 'add a new template')
   .command('delete', 'add a new template')
 
-console.log("hello world", process.argv)
 // 解析命令行参数
 program.parse(process.argv)
