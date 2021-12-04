@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+const Template = require('../utils/Template')
+
+const template = new Template()
+const list = template.getNameList()
+for (const item of list) {
+  console.log('  ' + item);
+}

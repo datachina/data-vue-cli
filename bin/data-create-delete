@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+// 交互式命令行
+const inquirer = require('inquirer')
+const chalk = require('chalk')
+const Template = require('../utils/Template')
+
+const question = [{
+  name: "templateName",
+  type: 'input',
+  message: "请输入模板名称",
+  validate (val) {
+    if (val === '') {
+      return '模板名称不能为空!'
+    } else {
+      return true
+    }
+  }
+}
+]
+
+inquirer
+  .prompt(question)
+  .then(answers => {
+    // 新增
+    const template = new Template()
+    template.delete(
+      answers.templateName,
+      err => {
+        if (err) {
+          console.log(chalk.red('删除失败', err));
+        } else {
+          console.log(chalk.green('\n删除成功'));
+          console.log('\ndtcreate list\n');
+        }
+        // 退出命令行
+        process.exit()
+      })
+  })
+  .catch((error) => {
+    console.log('err', error);
+    if (error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+      console.error(error);
+    } else {
+      // Something else went wrong
+    }
+  });

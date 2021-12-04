@@ -3,9 +3,13 @@ const program = require('commander')
 program
   .version(require('../package').version)
   .usage('<command> [options]')
-  .command('vue', 'add a new template')
-  .command('vue3', 'add a new template')
-  .command('react', 'add a new template')
+  .command('vue', 'vue a new template')
+  .command('vue3', 'vue3 a new template')
+  .command('react', 'react a new template')
+  .command('init', 'init a new template')
+  .command('list', 'list a new template')
+  .command('add', 'add a new template')
+  .command('delete', 'add a new template')
 
 console.log("hello world", process.argv)
 // 解析命令行参数
