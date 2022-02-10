@@ -8,6 +8,10 @@
 
 无论是`vue`还是`react`，不管你用的是`element`还是`vant`，只需一行命令，你将拥有一个包含一切的前端脚手架。
 
+
+
+`git地址: https://github.com/datachina/data-vue-cli.git`
+
 # 安装
 
 ``` 
