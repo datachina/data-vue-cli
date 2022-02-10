@@ -86,7 +86,7 @@ E:\data-vue-cli> dtcreate add
 
 
 
-##### 修改脚手架地址
+##### 删除脚手架地址
 
 `dtcreate delete`
 
