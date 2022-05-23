@@ -4,8 +4,6 @@ program
   .version(require('../package').version)
   .usage('<command> [options]')
   .command('vue', 'vue a new template')
-  .command('vue3', 'vue3 a new template')
-  .command('react', 'react a new template')
   .command('init', 'init a new template')
   .command('list', 'list a new template')
   .command('add', 'add a new template')

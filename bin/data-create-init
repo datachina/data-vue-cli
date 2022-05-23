@@ -35,7 +35,7 @@ inquirer
     // 回调函数，answers 就是用户输入的内容，是个对象
     downloadTemplate({
       appName: answers.appName,
-      url: template.getTplUrl(answers.tplName),
+      url: template.getTempUrl(answers.tplName),
     })
   })
   .catch((error) => {

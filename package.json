@@ -9,12 +9,10 @@
   "bin": {
     "dtcreate": "bin/data-create",
     "dtcreate-vue": "bin/data-create-vue",
-    "dtcreate-vue3": "bin/data-create-vue3",
-    "dtcreate-react": "bin/data-create-react",
     "dtcreate-init": "bin/data-create-vue",
-    "dtcreate-list": "bin/data-create-react",
-    "dtcreate-add": "bin/data-create-vue3",
-    "dtcreate-delete": "bin/data-create-react"
+    "dtcreate-list": "bin/data-create-list",
+    "dtcreate-add": "bin/data-create-add",
+    "dtcreate-delete": "bin/data-create-delete"
   },
   "author": "",
   "license": "ISC",

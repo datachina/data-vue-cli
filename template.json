@@ -1,1 +1,6 @@
-{"vue-element":"https://gitlab.com:yanxiaos/dtcreate-vue#element","vue-vant":"https://gitlab.com:yanxiaos/dtcreate-vue#vant","vue-ant-design-vue":"https://gitlab.com:yanxiaos/dtcreate-vue#ant-design-vue"}
+{
+  "vue-element": "https://gitlab.com:yanxiaos/dtcreate-vue#element",
+  "vue-vant": "https://gitlab.com:yanxiaos/dtcreate-vue#vant",
+  "vue-ant-design-vue": "https://gitlab.com:yanxiaos/dtcreate-vue#ant-design-vue",
+  "vue3-element-plus": "https://gitlab.com:yanxiaos/dtcreate-vue#vue3-element-plus"
+}
