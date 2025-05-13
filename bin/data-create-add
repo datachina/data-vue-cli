@@ -3,32 +3,20 @@
 const inquirer = require('inquirer')
 const chalk = require('chalk')
 const Template = require('../utils/Template')
+const {validateRequired, handlerError} = require("../utils");
 
 const question = [{
   name: "templateName",
   type: 'input',
   message: "请输入模板名称",
-  validate (val) {
-    if (val === '') {
-      return '模板名称不能为空!'
-    } else {
-      return true
-    }
-  }
+  validate: (val) => validateRequired(val, "模板名称")
 },
 {
   name: "templateUrl",
   type: 'input',
   message: "请输入模板地址",
-  validate (val) {
-    if (val === '') {
-      return '模板地址不能为空!'
-    } else {
-      return true
-    }
-  }
-},
-]
+  validate: (val) => validateRequired(val, "模板地址")
+}]
 
 inquirer
   .prompt(question)
@@ -48,12 +36,4 @@ inquirer
         process.exit()
       })
   })
-  .catch((error) => {
-    console.log('err', error);
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-      console.error(error);
-    } else {
-      // Something else went wrong
-    }
-  });
+  .catch(handlerError);

@@ -3,6 +3,7 @@
 const inquirer = require('inquirer')
 const downloadTemplate = require('../utils/downloadTemplate')
 const Template = require('../utils/Template')
+const {validateRequired, handlerError} = require('../utils')
 
 // 模板列表
 const template = new Template()
@@ -12,22 +13,14 @@ const question = [{
   name: "appName",
   type: 'input',
   message: "请输入项目名称",
-  validate (val) {
-    if (val === '') {
-      return 'Name is required!'
-    } else {
-      return true
-    }
-  }
+  validate: (val) => validateRequired(val, "项目名称")
 },
 {
+  name: 'tplName',
   type: 'list',
   message: '请选择模板',
-  name: 'tplName',
   choices: tplList
-}
-]
-
+}]
 
 inquirer
   .prompt(question)
@@ -38,12 +31,4 @@ inquirer
       url: template.getTempUrl(answers.tplName),
     })
   })
-  .catch((error) => {
-    console.log('err', error);
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-      console.error(error);
-    } else {
-      // Something else went wrong
-    }
-  });
+  .catch(handlerError);

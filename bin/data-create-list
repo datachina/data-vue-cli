@@ -1,9 +1,27 @@
 #!/usr/bin/env node
 const Template = require('../utils/Template')
+const { Table } = require("console-table-printer");
 
 const template = new Template()
-const list = template.getNameList()
+const temp = template.getTemplate()
 
-for (const item of list) {
-  console.log('  ' + item);
+const table = new Table({
+  columns: [
+    {
+      name: "name",
+      alignment: "center",
+      title: "名称",
+    },
+    {
+      name: "url",
+      alignment: "center",
+      title: "地址",
+    },
+  ],
+})
+
+for (const name in temp) {
+  table.addRow({name, url: temp[name]})
 }
+
+table.printTable()

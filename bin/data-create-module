@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+const inquirer = require('inquirer')
+const {createModules} = require('../utils/moduleCreate')
+const {validateRequired, handlerError} = require('../utils')
+
+
+const modules = ["views", "api"]
+
+const question = [{
+  name: "moduleName",
+  type: 'input',
+  message: "请输入模块名称",
+  validate: (val) => validateRequired(val, "模块名称")
+},
+{
+  name: 'modules',
+  type: 'checkbox',
+  message: '请选择需要创建的模块',
+  choices: modules
+}]
+
+inquirer
+  .prompt(question)
+  .then(answers => {
+    // 判断文件夹是否存在
+    createModules(answers.moduleName, answers.modules)
+  })
+  .catch(handlerError);

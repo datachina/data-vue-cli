@@ -110,3 +110,11 @@ E:\data-vue-cli> dtcreate delete
 - 支持react脚手架的创建
 - 增加更多脚手架模板
 - 实现依赖动态选择
+
+
+## 开发
+
+包根目录执行 `npm link` 将本地包链接到全局
+项目根目录执行 `npm link dtcreate` 将全局的包链接到项目
+项目根目录执行 `npm unlink dtcreate` 将全局的包取消链接到项目
+

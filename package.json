@@ -1,6 +1,6 @@
 {
   "name": "dtcreate",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,17 +8,18 @@
   },
   "bin": {
     "dtcreate": "bin/data-create",
-    "dtcreate-vue": "bin/data-create-vue",
-    "dtcreate-init": "bin/data-create-vue",
+    "dtcreate-init": "bin/data-create-init",
     "dtcreate-list": "bin/data-create-list",
     "dtcreate-add": "bin/data-create-add",
-    "dtcreate-delete": "bin/data-create-delete"
+    "dtcreate-delete": "bin/data-create-delete",
+    "dtcreate-module": "bin/data-create-module"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "2.4.2",
     "commander": "^8.3.0",
+    "console-table-printer": "^2.12.1",
     "download-git-repo": "^3.0.2",
     "inquirer": "^8.2.0",
     "ora": "4.0.2"
